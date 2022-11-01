@@ -1,0 +1,157 @@
+* {font-family: $main-font;}
+body {background-color: black;}
+
+// Intro-wrapper
+.intro-wrapper {
+
+    .vid-container {
+        position: absolute;
+        height: 100vh;
+        width: 100%;
+        z-index: -1;
+
+        video {
+            height: 100vh;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .vid-mobile {display: none;}
+    }
+        
+    .mask {
+        width: 100%;
+        position: absolute;
+        background-color: rgba(0,0,0,1);
+    
+        z-index: 3;
+        animation: mask 1.2s forwards 0.5s, z-bye 0.1s forwards 1.7s;
+    }    
+}
+
+@keyframes mask {100% {background-color: rgba(0,0,0,0);}}
+@keyframes z-bye {100% {z-index: -1;}}
+
+
+
+// Header
+header {
+    z-index: 2;
+    background-color: rgba(70,70,70,0.6);
+    color: white;
+    width: 100%;
+    &:hover {
+        background-color: rgba(130,130,130,0.7);
+    }
+
+    .logo-word {
+        height: 30px;
+    }
+    
+    .my-link {
+        color: white;
+    }    
+}
+
+// Footer
+footer {
+    p, a {margin: 0; padding: 0;}
+    a {
+        text-decoration: none;
+        color: white;
+
+        &:hover {
+            cursor: pointer;
+            text-decoration: underline;
+            color: $purple2;
+        }   
+    }
+
+    .footer-element {
+        margin: 20px 0;
+        margin-bottom: 40px;
+        text-align: center;        
+    }
+} 
+
+
+// Clases reutilizables o Comunes
+.vh70 {height: 70vh;}
+.vh30 {height: 30vh;}
+// .vh20 {height: 20vh;}
+.vh40 {height: 40vh;}
+
+.bg-mine {background-color: rgba(11,11,11,0.75);}
+
+.hundred-sections {
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    .title {
+        position: relative;
+        font-size: 4rem;
+        top: 30%;
+        text-align: center;
+    }
+
+    .phrase {
+        font-size: 1.4rem;
+        text-align: center;
+    }
+}
+
+.action {
+    position: relative;
+    text-decoration: none;
+    color: white;
+    bottom: 10vh;
+    text-align: center;
+    border-radius: 1.4rem;
+    background-color: $grey1;
+}
+
+.main-action {
+    background: rgba(255, 255, 255, 0.9);
+    color: black;
+}
+
+#log-in:hover, .main-action:hover, .action:hover, .dest-main:hover {
+    @include grad-n-color(#440386, #7c09ff, white);
+    cursor: pointer;
+}
+
+.background {
+    background-position: center;
+}
+
+/* ~ D E T A L L E S */
+.excp {
+    border: 0;
+    height: 1px;
+    border-top: 1px solid #fff;
+    width: 95%;
+    display: block;
+    margin: 20px auto;
+    margin-top: 60px;
+}
+
+.clear {
+    text-decoration: none;
+    color: white;
+}
+
+
+.footer-sep {
+    border: 0px;
+    border-top: solid 2px white;
+    // color: white;
+    opacity: .40;
+    width: 95%;
+    margin: 10px auto;
+    margin-bottom: 30px;
+
+}
+
+.center {
+    @include flex-align;
+}

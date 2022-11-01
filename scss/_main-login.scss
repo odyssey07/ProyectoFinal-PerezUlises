@@ -1,0 +1,73 @@
+.logo-globe {
+    height: 30px;
+}
+
+.log-main {
+    @include flex-align($main-axis: initial, $direction: column);
+    width: 100%;
+    height: 85vh;
+
+    .h1-sign {
+        margin-top: 15vh;
+        margin-bottom: 6vh;
+        color: white;
+        font-size: 3rem;
+    }
+
+    .hun-label1, .hun-input {
+        display: block;
+        color: white;
+    }
+
+    .hun-input, .hun-button, .hun-submit {
+        border-radius: 20px;
+        height: 40px;
+        border: 0;
+        width: 100%;
+        margin-bottom: 3vh;
+    }
+
+    .hun-label1 {
+        margin-left: 6px;
+        margin-bottom: 4px;
+    }
+
+    .hun-input:focus {border: 0;}
+    .hun-input {background-color: rgba(255, 255, 255, 0.09);}
+    .hun-style1 {@include grad-n-color($purple1, $purple2, white);}
+    .hun-style2 {@include grad-n-color($grey2, $grey3, white);}
+
+    form, .hun-button {width: 25%; min-width: 500px;}
+
+    input {font-weight: normal;}
+
+    .log-help {
+        color: $grey1;
+        display: inline;
+    }
+
+    .or {margin: 3vh 0;
+        .sep {
+            display: inline-block;
+            margin: 0 5px;
+            color: $grey1;
+        }
+    
+        .line {
+            display: inline-block;
+            border-top: 1px solid rgba(35, 35, 35, 0.9);
+            height: 1px;
+            width: 160px;
+        }
+    }
+
+    a {
+        @include flex-align;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: none;
+            color: white;
+        }
+    }
+}

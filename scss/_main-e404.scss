@@ -1,0 +1,69 @@
+.bottom {
+    position: absolute;
+    bottom: 0;
+}
+
+.body-e404 {
+    background-color: #161616;
+}
+
+$size: 30vh;
+$ratio: 1.4;
+
+@keyframes rotate{
+    0%   {transform: rotateX(0deg)   rotateY(0deg)   rotateZ(0deg);}
+    100% {transform: rotateX(360deg) rotateY(180deg) rotateZ(90deg);}
+}
+
+
+.e404 {
+    height: 100vh;
+    @include flex-align($direction: column);
+
+    .e-text {
+        color: rgb(164, 164, 164);
+        font-size: 3rem;
+        text-align: center;
+    }
+
+    #sphere {
+        position: relative;
+        bottom: 5vh;
+
+        width: $size; height: $size;
+        transform-style: preserve-3d;
+    
+        animation: rotate 10s infinite alternate linear;
+        transition: width 2s ease-in,
+                   height 2s ease-in;
+
+        &:active {
+            width: calc($size * $ratio);
+            height: calc($size * $ratio);
+        }
+
+        .ring {
+            width: 100%;
+            height: 100%;
+            
+            border: 4px solid white;
+        
+            border-radius: 50%;
+            position: absolute;
+        }
+
+        #ring1 {transform: rotateX(0deg)}
+        #ring4 {transform: rotateX(60deg)}
+        #ring7 {transform: rotateX(120deg)}
+        #ring10 {transform: rotateX(180deg)}
+        #ring13 {transform: rotateX(240deg)}
+        #ring16 {transform: rotateX(300deg)}
+
+        #ring19 {transform: rotateY(20deg)}
+        #ring22 {transform: rotateY(80deg)}
+        #ring25 {transform: rotateY(140deg)}
+        #ring28 {transform: rotateY(200deg)}
+        #ring31 {transform: rotateY(260deg)}
+        #ring34 {transform: rotateY(320deg)}
+    }
+}

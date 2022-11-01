@@ -1,0 +1,18 @@
+@mixin flex-align($main-axis: center, $cross-axis:center, $direction: row) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $main-axis;
+    align-items: $cross-axis;
+}
+
+@mixin grad-n-color($grad1, $grad2, $color) {
+    background-image: linear-gradient(90deg, $grad1, $grad2);
+    color: $color;
+}
+
+@mixin title-portrait {
+    .title {
+        font-size: 3rem;
+        top: 17%;
+    }
+}

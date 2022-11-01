@@ -1,0 +1,70 @@
+.destinations-h1 {
+    position: relative;
+    top: 100px;
+    margin-bottom: 100px;
+    color: white;
+    font-weight: bold;
+    font-size: 3rem;
+    text-align: center;
+}
+
+.gallery {
+    position: relative;
+
+    .img-set {
+        position: relative;
+        left: 10px;
+        margin-bottom: 5vh;
+
+        a {
+            .show-container {
+                position: relative;
+                overflow: hidden;
+                box-shadow: 0 3px 15px rgba(255, 255, 255, 0.2);
+
+                @include flex-align;
+
+                height: 40vh;
+                width: 100%;
+
+                &:hover .show-cover {
+                    background-color: $bd-anim-color;
+                    animation: rotate-x 2s linear infinite;
+                }
+
+                .show {
+                    width: 99%;
+                    height: 39.5vh;
+                    object-fit: cover;
+                }
+
+                .show-cover {
+                    height: 80vh;
+                    width: 50%;
+                    background-color: transparent;
+                    position: absolute;
+                    transform: rotate(45deg);
+                    z-index: -1;
+
+                    transition: background-color 0.2s;
+                }
+            }
+        }
+
+        .subtitle,
+        .caption {
+            @include flex-align;
+            margin-top: 2vh;
+        }
+    }
+}
+
+@keyframes rotate-x {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

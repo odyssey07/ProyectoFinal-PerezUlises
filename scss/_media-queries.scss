@@ -1,0 +1,213 @@
+/* PC & Tablet */
+@media screen and (min-width: 992px){
+    .navbar-nav {
+        .my-link {
+            border-radius: 30px;
+            list-style: none;
+            color: white;
+            &:hover {
+                background: white;
+                color: black;
+                cursor: pointer;
+            }
+        }
+    }
+    
+    #log-in {
+        background: white;
+        color: black;
+    }
+
+    .action {
+        right: 15%;
+        width: 45%;
+        padding: 1% 0;
+    }
+
+    .prm-prg {
+        width: 40%;
+        font-size: 1.3rem;
+    }
+    .more {
+        font-size: 1.3rem;
+    }
+
+    .title {font-size: 4rem;}
+    .my-link {margin-left: 70px;}
+    .last-link {margin-right: 15px;}
+    .main-action {left: 15%;}
+    .fs-b, .fs-c {font-size: 2rem;}
+    .gallery {top: 8vh;}
+}
+
+/* iPads (Portrait) */
+@media screen and (min-width: 992px) and (max-width: 1174px) {
+    .my-link {margin-left: 33px}
+    .fs-b, .fs-c {font-size: 1.5rem}
+    .prm-prg {width: 55%}
+}
+
+@media screen and (max-width: 991px) {    
+    .logo {
+        max-width: none;
+        width: 30%;
+        position: relative;
+    }
+
+    .action {
+        width: 55%;
+        padding: 2% 0;
+    }
+    #log-in {
+        color: white;
+        background-color: initial;
+    }
+
+    #log-in:hover {background-image: initial;}
+
+    .log-main {
+        height: 75vh;
+        .hun-button, form {width: 50%; min-width: 400px;}
+    }
+
+    .fs-b, .fs-c {font-size: 1.6rem}
+    .dest-main {
+        padding: 3px 20px;
+    }
+
+    .title {
+        font-size: 4rem;
+        text-align: center;
+    }
+
+    .prm-prg {
+        margin: 0 30px;
+        font-size: 1.4rem;
+        width: 60%;
+    }
+
+    .more {
+        font-size: 1.4rem;
+        padding: 10px 30px;
+    }
+
+    .phrase {margin: 0 30px;}
+
+    header {
+        background-color: rgba(110,110,110,0.6);
+        &:hover {background-color: rgba(180,180,180,0.96);}
+
+        .logo-word {
+            position: relative;
+            right: 15px;
+        }
+
+        .navbar-nav .my-link {
+            margin: 10px 0px;
+        }
+    }
+}
+
+/* Phone [0] (Portrait) */
+@media screen and (max-width: 768px) {
+    .intro-wrapper {
+        .vid-container {
+            .vid-mobile {display: initial;}
+            .vid-desktop {display: none;}
+        }
+    }
+    .fs-b {font-size: 1.3rem;}
+
+    .prm-prg {width: initial}
+}
+
+/* Phone [1] (Portrait)*/
+@media screen and (max-width: 562px) {
+    .logo {
+        max-width: none;
+        width: 50%;
+    }
+    
+    .hundred-sections {@include title-portrait;}
+    @include title-portrait;
+
+    .dest-main {
+        position: relative;
+        width: 80%;
+        text-align: center;
+        bottom: 20%;
+    }
+
+    .action {width: 75%;}
+    footer {
+        .footer-element {margin: 20px 0;}
+    }
+    .fs-c {font-size: 1.8rem;}
+    .more, .prm-prg {font-size: 1.2rem;}
+    .logo-globe {position: relative;}
+    .gallery {top: 10vh;}
+    
+    .log-main {
+        .hun-button, form {width: 80%; min-width: unset;}
+    }
+
+    .more {
+        padding: 10px 25px;
+    }
+}
+
+/* Phone [2] (Portrait) ~Dettales */
+@media screen and (max-width: 411px) {
+    .prm-prg {
+        font-size: 1.1rem;
+        position: relative;
+        bottom: 50px;
+    }
+}
+
+/* Phone (Landscape) */
+@media screen and (max-width: 915px) and (orientation: landscape) {
+    .logo {
+        position: relative;
+        top: 20%;
+        width: 23%;
+    }
+
+    .action {
+        bottom: 0vh;
+        padding: 4px 0px;
+        width: 50%;
+        font-size: 1.2rem !important;
+    }
+
+    .cus-book {width: 60%;}
+    .fs-c {font-size: 1.3rem;}
+    
+    .hundred-sections {.title {font-size: 3rem;}}
+    .title {font-size: 3rem}
+    // Afectan cosas diferentes
+
+    .gallery {top: 20vh;}
+
+    .log-main {
+        height: 120vh;
+        .hun-button, form {width: 60%}
+    }
+
+    .prm-prg {font-size: 1rem; width: initial}
+    .more {font-size: 1.2rem}
+
+    .intro-wrapper {
+        .vid-container {
+            .vid-mobile {display: initial;}
+            .vid-desktop {display: none;}
+        }
+    }
+
+    .e404 {#sphere {display: none}}
+}
+
+/* PC (Sin importar el ancho de la ventana) */
+@media screen and (min-device-width: 1281px){
+    .gallery {top: 10vh;}
+}

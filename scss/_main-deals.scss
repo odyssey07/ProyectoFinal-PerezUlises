@@ -1,0 +1,55 @@
+.prm-prg {
+    text-align: center;
+}
+
+#orion-1 {background-image: url("../assets/img_orion-cygnus1.jpg");}
+#adr2 {
+    background-image: url("../assets/img_andromeda2.jpg");
+    background-position: 50% 0;
+}
+
+.dest-main {
+    text-decoration: none;
+    color: black;
+    // font-weight: bold;
+    background-color: white;
+    border-radius: 30px;
+    padding: 1px 60px;
+}
+
+.m-white, .m-black {
+    padding: 1% 2%;
+    border-radius: 30px;
+
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.m-white {
+    color: white;
+    background-color: black;
+
+    &:hover {
+        color: white;
+        text-decoration: underline;
+    }
+}
+
+.m-black {
+    color: black;
+    background-color: white;
+
+    &:hover {
+        color: black;
+        text-decoration: underline;
+    }
+}
+
+// @keyframes neo {
+//     0% {
+//         text-shadow: 10px 10px 15px $purple1, 10px -10px 15px $purple2;
+//     }
+//     100% {
+//         text-shadow: -10px -10px 15px $purple1, 10px 10px 15px $purple2;
+//     }
+// }

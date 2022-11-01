@@ -1,0 +1,30 @@
+.logo {
+    max-width: 250px;
+    width: 20%;
+
+    path {
+        fill: rgba(255, 255, 255, 0);
+        stroke: $purple3;
+        stroke-width: 20px;
+        
+        stroke-dasharray: 11300;
+        stroke-dashoffset: 11300;
+    
+        animation: show-logo 3s linear forwards 0.7s;
+    }
+}
+
+#orion-0 {background-image: url("../assets/img_orion-arm0.jpg");}
+#proxima-0 {background-image: url("../assets/img_proxima-centauri0.jpg");}
+#venus-0 {background-image: url("../assets/img_venus0.jpg");}
+
+@keyframes show-logo {
+    70% {
+        stroke-dashoffset: 0;
+    }
+    100% {
+        fill: rgba(255,255,255,1);
+        stroke: white;
+        stroke-dashoffset: 0;
+    }
+}
