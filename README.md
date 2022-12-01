@@ -1,5 +1,4 @@
-# ProyectoFinal-PerezUlises
-Proyecto final del curso "Desarrollo Web" de CoderHouse
+# Hundred Project
 
 Se desarrolla la página web de una empresa ficticia llamada "Hundred", que realiza viajes interestelares.
 
